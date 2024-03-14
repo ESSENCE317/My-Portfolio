@@ -30,7 +30,7 @@ def load_lottieurl(url):
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html= True)
-local_css(r"C:\Users\Cody\PycharmProjects\My-Portfolio\Style\style.css")
+local_css(r"C:\Users\Cody\PycharmProjects\My-Portfolio\style.css")
 
 st.write("##")
 st.subheader("Hi There! :wave:")
