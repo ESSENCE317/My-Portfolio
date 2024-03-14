@@ -1,10 +1,14 @@
+import os
 import streamlit as st
 from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
 from PIL import Image
 
+css_file_path = os.path.join("Style", "style.css")
+
 st.set_page_config(layout="wide")
+
 
 def load_lottieurl(url):
     r = requests.get(url)
