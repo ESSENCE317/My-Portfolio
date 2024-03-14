@@ -28,8 +28,13 @@ def load_lottieurl(url):
     return r.json()
 
 def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html= True)
+    try:
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+    except FileNotFoundError:
+        st.error(f"The file '{file_name}' was not found.")
+
+
 local_css(r"C:\Users\Cody\PycharmProjects\My-Portfolio\style.css")
 
 st.write("##")
